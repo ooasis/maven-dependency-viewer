@@ -1,4 +1,5 @@
-# node-dep-service
+# Overview
+Web app to view Maven dependencies of projects hosted in gitlab.  The dependencies are stored inside a neo4j database.
 
 ## data setup flow
 

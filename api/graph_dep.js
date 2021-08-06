@@ -102,9 +102,9 @@ const queryNodes = async (q, v) => {
 
 class Neo4JProcessor {
   constructor(url, user, passwd) {
-    this.url = 'neo4j://localhost'
-    this.user = 'neo4j'
-    this.password = 'neo4j'
+    this.url = process.env.NEO4J_URL
+    this.user = process.env.NEO4J_USER
+    this.password = process.env.NEO4J_PASS
   }
 
   async runQuery(q) {

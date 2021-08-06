@@ -34,7 +34,8 @@ const prepareProjectDependenciesData = (dependency) => {
 }
 
 ;(async () => {
-  const repo = new Neo4JRepository('neo4j://localhost', 'neo4j', 'neo4j')
+  const repo = new Neo4JRepository(
+    process.env.NEO4J_URL, process.env.NEO4J_USER, process.env.NEO4J_PASS)
 
   let dir = await fs.opendir('dep')
   for await (const dirent of dir) {
